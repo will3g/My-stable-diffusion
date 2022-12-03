@@ -1,0 +1,1000 @@
+ 1132  python ./fix_urls_for_rewrite.py ./redirect-teste.txt
+ 1133  python ./fix_urls_for_rewrite.py -p ./redirect-teste.txt
+ 1134  python ./fix_urls_for_rewrite.py -p ./all_redirects.inc
+ 1135  cd ~/
+ 1136  mysql -u root -p
+ 1137  docker run --name editora_mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7 --secure-file-priv=tmp
+ 1138  docker exec -it editora_mysql bash
+ 1139  sudo apt-get remove --purge mysql-server mysql-client mysql-common -y && sudo apt-get autoremove -y && sudo apt-get autoclean && sudo rm -rf /etc/mysql && sudo find / -iname 'mysql*' -exec rm -rf {} \; && sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-* && sudo rm -rf /etc/mysql /var/lib/mysql && sudo apt purge mysql-server* && apt-get --purge remove "mysql*"
+ 1140  mysql
+ 1141  sudo apt purge mysql-server mysql-client mysql-common mysql-server-core-5.7 mysql-client-core-5.7
+ 1142  rm -rfv /etc/mysql /var/lib/mysql
+ 1143  apt-get remove dbconfig-mysql
+ 1144  sudo apt-get remove dbconfig-mysql
+ 1145  wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+ 1146  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+ 1147  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+ 1148  sudo apt-cache policy mysql-server
+ 1149  sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+ 1150  sudo apt-get install mysql-server
+ 1151  sudo apt purge mysql-server mysql-client mysql-common mysql-server-core-5.7 mysql-client-core-5.7
+ 1152  rm -rfv /etc/mysql /var/lib/mysql
+ 1153  sudo apt-get remove dbconfig-mysql
+ 1154  sudo apt autoremove
+ 1155  sudo apt-get install mysql-server
+ 1156  mysql
+ 1157  mysql -u root -p
+ 1158  sudo apt purge mysql-server mysql-client mysql-common mysql-server-core-5.7 mysql-client-core-5.7
+ 1159  ll
+ 1160  cd ~/Downloads/
+ 1161  ll
+ 1162  cd ~/Desktop/
+ 1163  ll
+ 1164  docker run exec -i editora_mysql sh -c 'exec mysql -u=root -p=root editora_mysql' < ~/Desktop/techtudo_v2.sql
+ 1165  sudo docker run exec -i editora_mysql sh -c 'exec mysql -u=root -p=root editora_mysql' < ~/Desktop/techtudo_v2.sql
+ 1166  docker run exec -i editora_mysql sh -c 'exec mysql -u=root -p=root' < ~/Desktop/techtudo_v2.sql
+ 1167  docker run exec -i editora_mysql sh -c 'eval mysql -u=root -p=root' < ~/Desktop/techtudo_v2.sql
+ 1168  docker run exec -i editora_mysql sh -c 'eval mysql -u root -p=root' < ~/Desktop/techtudo_v2.sql
+ 1169  docker run exec -i mysql sh -c 'eval mysql -u root -p=root' < ~/Desktop/techtudo_v2.sql
+ 1170  docker run exec -i mysql sh -c 'eval mysql -u=root -p=root' < ~/Desktop/techtudo_v2.sql
+ 1171  docker run exec -i mysql sh -c 'exec mysql -u=root -p=root editora_mysql' < ~/Desktop/techtudo_v2.sql
+ 1172  docker run exec -i mysql sh -c 'mysql -u=root -p=root editora_mysql' < ~/Desktop/techtudo_v2.sql
+ 1173  tsuru app-log -fa audio-api-sgr-prod
+ 1174  tsuru app-list | grep -i audio
+ 1175  tsuru app-info -a audio-api-sgr-gcp-prod
+ 1176  tsuru plan-list
+ 1177  tsuru app-info -a audio-api-sgr-prod
+ 1178  tsuru app-info -a globoradio-api-sgr-gcp-prod
+ 1179  tsuru app-log -fa globoradio-api-sgr-gcp-prod
+ 1180  tsuru app-info -a globoradio-api-sgr-gcp-prod
+ 1181  tsuru app-info -a audio-api-sgr-gcp-prod
+ 1182  cd ..
+ 1183  ll
+ 1184  cd s3-content
+ 1185  ll
+ 1186  cd static_servers/
+ 1187  ll
+ 1188  find edg3 -type f > static_edg3.txt
+ 1189  ll
+ 1190  cat static_edg3.txt
+ 1191  ll
+ 1192  ./upload_solr_galeria_xml.sh ./static_edg3.txt edg3
+ 1193  ll
+ 1194  ./upload_static_files.sh ./static_edg3.txt edg3
+ 1195  cd ..
+ 1196  ll
+ 1197  cd teste-script-rpaas/
+ 1198  ll
+ 1199  virtualenv venv -p python3
+ 1200  source venv/bin/activate
+ 1201  tsuru app-list | grep -i futebol
+ 1202  tusur app-info -a futebol-sgr-gcp-prod
+ 1203  tsuru app-info -a futebol-sgr-gcp-prod
+ 1204  tsuru unit autoscale set -a futebol-sgr-gcp-prod --cpu "50%" --min 3 --max 5
+ 1205  tsuru app-info -a futebol-sgr-gcp-prod
+ 1206  ll
+ 1207  cd redirects_fix/
+ 1208  ll
+ 1209  python fix_urls_for_rewrite.py new_redirects.inc
+ 1210  python fix_urls_for_rewrite.py ./new_redirects.inc
+ 1211  python --version
+ 1212  tsuru app-list | grep -i techtudo
+ 1213  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1214  curl -IL techtudo-vintage-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo/noticias/noticia/2013/08/como-adicionar-contatos-a-lista-favoritos-no-skype.html
+ 1215  curl -IL http://techtudo-vintage-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo/noticias/noticia/2013/08/como-adicionar-contatos-a-lista-favoritos-no-skype.html
+ 1216  tsuru app-log -fa techtudo-vintage-shared-router-gcp-prod
+ 1217  dig epoca.oglobo.globo.com
+ 1218  tsuru app-log -fa techtudo-vintage-shared-router-gcp-prod
+ 1219  tsuru service list | grep -i kogut
+ 1220  tsuru service list | grep -i techtudo
+ 1221  tsuru service instance info rpaasv2-be techtudo-router-gcp-prod
+ 1222  tsuru service instance remove rpaasv2-be techtudo-router-gcp-prod
+ 1223  tsuru service list | grep -i techtudo
+ 1224  cd techtudo-vintage-router-gcp/
+ 1225  git status
+ 1226  git add shared/deploy.tf shared/templates/redirects/
+ 1227  git commit -m "add redirects in shared app"
+ 1228  git push
+ 1229  git status
+ 1230  git add .
+ 1231  git commit -m "add redirects in shared app"
+ 1232  git push
+ 1233  git status
+ 1234  git add shared/deploy.tf shared/templates/redirects/
+ 1235  git commit -m "add redirects in shared app"
+ 1236  git push
+ 1237  git status
+ 1238  git add .
+ 1239  git commit -m "add redirects in shared app"
+ 1240  git push
+ 1241  git status
+ 1242  git add shared/templates/redirects-nginx.inc
+ 1243  git commit -m "add redirects in shared app"
+ 1244  git push
+ 1245  git add shared/templates/redirects-nginx.inc
+ 1246  git commit -m "add redirects in shared app"
+ 1247  git push
+ 1248  git add shared/templates/redirects-nginx.inc
+ 1249  git commit -m "add redirects in shared app"
+ 1250  git push
+ 1251  git add shared/templates/redirects-nginx.inc
+ 1252  git commit -m "add redirects in shared app"
+ 1253  git push
+ 1254  git add shared/templates/redirects-nginx.inc
+ 1255  git commit -m "add redirects in shared app"
+ 1256  git push
+ 1257  git status
+ 1258  git add shared/templates/tsuru.yaml shared/templates/old-tsuru.yaml-old
+ 1259  git commit -m "add redirects in shared app"
+ 1260  git push
+ 1261  git status
+ 1262  git add shared/deploy.tf
+ 1263  git commit -m "add redirects in shared app"
+ 1264  git push
+ 1265  git status
+ 1266  git add .
+ 1267  git commit -m "add redirects in shared app"
+ 1268  git status
+ 1269  git push
+ 1270  sudo rm -r .git
+ 1271  git init
+ 1272  git remote add origin gitlab@gitlab.globoi.com:editora-globo/techtudo-vintage-router-gcp.git
+ 1273  git add .
+ 1274  git commit -m "Initial commit"
+ 1275  git push -u origin master
+ 1276  git status
+ 1277  git add shared/deploy.tf
+ 1278  git commit -m "Initial commit"
+ 1279  git push -u origin master
+ 1280  git add .
+ 1281  git commit -m "Initial commit"
+ 1282  git push -u origin master
+ 1283  git status
+ 1284  git add shared/
+ 1285  git commit -m "fix app-shared router"
+ 1286  git push
+ 1287  git status
+ 1288  cd techtudo-router-gcp/
+ 1289  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1290  host techtudo-vintage-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo
+ 1291  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1292  tsuru app-log -fa techtudo-vintage-shared-router-gcp-prod
+ 1293  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1294  watch tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1295  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1296  tsuru app update -a techtudo-vintage-shared-router-gcp-prod --plan c0.1m0.5
+ 1297  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1298  watch tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1299  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1300  git status
+ 1301  git add .
+ 1302  git commit -m "update router for app-shared configuration"
+ 1303  git push
+ 1304  git status
+ 1305  tsuru app-info -fa audio-api-sgr-gcp-prod
+ 1306  tsuru app-log -fa audio-api-sgr-gcp-prod
+ 1307  tsuru app-log -fa audio-api-sgr-gcp-prod | grep -i errpr
+ 1308  tsuru app-log -fa audio-api-sgr-gcp-prod | grep -i error
+ 1309  tsuru rpaasv2 logs -f -s rpaasv2-be -i crescer-router-gcp-prod
+ 1310  tsuru rpaasv2 shell -s rpaasv2-be -i crescer-router-gcp-prod
+ 1311  cd ~/dev/
+ 1312  ll
+ 1313  cd routes_gcp/
+ 1314  ll
+ 1315  cd techtudo-router-gcp/
+ 1316  git remote origin url
+ 1317  git remote all-url
+ 1318  git remote get-url
+ 1319  git remote get-url origin
+ 1320  git rename origin old-origin
+ 1321  git remote rename origin old-origin
+ 1322  git remote add gitlab@gitlab.globoi.com:editora-globo/rpaas-techtudo-router-gcp.git
+ 1323  git remote add origin gitlab@gitlab.globoi.com:editora-globo/rpaas-techtudo-router-gcp.git
+ 1324  git remote rename origin old-origin
+ 1325  git remote add origin gitlab@gitlab.globoi.com:editora-globo/rpaas-techtudo-router-gcp.git
+ 1326  git remote get-url origin
+ 1327  git rename remote origin old-origin
+ 1328  git remote rename origin old-origin
+ 1329  git remote rename origin old-origin-2
+ 1330  git remote add origin gitlab@gitlab.globoi.com:editora-globo/devops/rpaas-techtudo-router-gcp.git
+ 1331  git status
+ 1332  git diff
+ 1333  git status
+ 1334  git add rpaas/templates/http.tftpl
+ 1335  git commit -m "crete redirect for domain"
+ 1336  git push
+ 1337  git push -u origin master
+ 1338  sudo nano /etc/hosts
+ 1339  cat /etc/hosts
+ 1340  cd ..
+ 1341  cd ~/dev/routes_gcp/
+ 1342  git clone gitlab@gitlab.globoi.com:editora-globo/epoca-oglobo-shared-router-gcp.git
+ 1343  cd epoca-oglobo-shared-router-gcp/
+ 1344  codew .
+ 1345  code .
+ 1346  git add .
+ 1347  git status
+ 1348  git commit -m "rollback router"
+ 1349  git push
+ 1350  git add .
+ 1351  git commit -m "rollback router"
+ 1352  git push
+ 1353  git add .
+ 1354  git commit -m "rollback router"
+ 1355  git push
+ 1356  cd ~/Desktop
+ 1357  docker exec -i editora_mysql /usr/bin/mysql -u root --password=root edg2 < ~/Desktop/edg2.sql
+ 1358  docker exec -it editora_mysql bash
+ 1359  docker exec -i editora_mysql /usr/bin/mysql -u root --password=root edg2 < ~/Desktop/edg2.sql
+ 1360  mkdir script_epoca
+ 1361  cd script_epoca/
+ 1362  code .
+ 1363  virtualenv venv -p python3
+ 1364  source venv/bin/activate
+ 1365  ll
+ 1366  python script.py
+ 1367  python3
+ 1368  python script.py
+ 1369  python3
+ 1370  python script.py
+ 1371  cd ~/dev/routes_gcp/monet-router-gcp/
+ 1372  git status
+ 1373  git add rpaas/files/redirects-vintage-nginx.inc
+ 1374  git commit -m "add redirects"
+ 1375  git push
+ 1376  cd ~/dev/scripts/
+ 1377  code .
+ 1378  tsuru app deploy list -a blogs-shared-router-gcp-prod
+ 1379  blogs-shared-router-gcp-prod
+ 1380  tsuru app deploy list -a blogs-shared-router-gcp-prod
+ 1381  cd kogut-router-gcp/
+ 1382  tsuru service list | grep -i blogs
+ 1383  tsuru app-list | grep -i ni
+ 1384  tsuru app-log -fa nietzsche-prd
+ 1385  tsuru app list | grep -i blogs
+ 1386  tsuru app-log -fa blogs-shared-router-gcp-prod
+ 1387  tsuru app-shell -a blogs-shared-router-gcp-prod
+ 1388  tsuru app-info -a blogs-shared-router-gcp-prod
+ 1389  git clone gitlab@gitlab.globoi.com:editora-globo/blogs-router-gcp.git
+ 1390  git clone gitlab@gitlab.globoi.com:editora-globo/kogut-router-gcp.git
+ 1391  cd blogs-router-gcp/
+ 1392  code .
+ 1393  git status
+ 1394  git add shared/prod/terraform.tfvars shared/templates/routes.tftpl
+ 1395  git commit -m "add rule for backstage gcp search"
+ 1396  git push
+ 1397  cd ~/dev/
+ 1398  ll
+ 1399  cd scripts/
+ 1400  ll
+ 1401  cd ..
+ 1402  cd s3-content/
+ 1403  ll
+ 1404  code .
+ 1405  cd galerias_xml
+ 1406  ll
+ 1407  ./upload_solr_galeria_xml.sh ./teste/teste.txt
+ 1408  ./upload_solr_galeria_xml.sh ./teste/teste.txt glamour
+ 1409  ll
+ 1410  ./automatic_edg3.sh
+ 1411  docker exec -it editora_mysql bash
+ 1412  docker image ls | grep -i edi
+ 1413  docker ps
+ 1414  docker image ls
+ 1415  docker exec -i editora_mysql /usr/bin/mysql -u root --password=root techtudov2 < ~/Desktop/techtudo_v2.sql
+ 1416  source /home/william/dev/scripts/venv/bin/activate
+ 1417  /home/william/dev/scripts/venv/bin/python
+ 1418  tsuru plan list
+ 1419  tsuru app-list | grep -i techtudo
+ 1420  tsuru app-log -fa techtudo-vintage-shared-router-gcp-prod
+ 1421  tsuru app-list | grep -i techtudo
+ 1422  host techtudo.com.br
+ 1423  tsuru app-list | grep -i epoca
+ 1424  tsuru service list | grep -i epoca
+ 1425  tsuru routes info -s rpaasv2-fe -i epoca-oglobo-router-gcp-prod
+ 1426  tsuru router info -s rpaasv2-fe -i epoca-oglobo-router-gcp-prod
+ 1427  cd ~
+ 1428  cd ~/dev/
+ 1429  mkdir statics
+ 1430  cd statics/
+ 1431  wget http://revistaepoca.globo.com/header.html?sitepage=edepoca/edepoca/sociedade&barra5minutos=false
+ 1432  curl -IL https://techtudo.com.br/tudo-sobre/lego-pirates-caribbean-video-game/
+ 1433  curl -IL https://techtudo.com.br/tudo-sobre/adobe/
+ 1434  curl -IL https://techtudo.com.br/tudo-sobre/lego-pirates-caribbean-video-game/
+ 1435  curl -IL https://techtudo.com.br/noticias/noticia/2011/02/preview-lego-pirates-caribbean-video-game.html
+ 1436  curl -IL https://techtudo.com.br/tudo-sobre/adobe/1/plantao.html
+ 1437  curl -IL https://techtudo.com.br/tudo-sobre/adobe/plantao/1.html
+ 1438  curl -IL httpa://techtudo.com.br/kits/2.html
+ 1439  curl -IL https://techtudo.com.br/kits/2.html
+ 1440  curl -IL https://techtudo.com.br/kits/plantao/3.html
+ 1441  curl -IL https://techtudo.com.br/tudo-sobre/facebook/feed/pagina-3.html
+ 1442  curl -IL https://techtudo.com.br/tudo-sobre/koo.html
+ 1443  curl -IL https://techtudo.com.br/tudo-sobre/twitter.html
+ 1444  curl -IL https://techtudo.com.br/tudo-sobre/adobe/plantao.html
+ 1445  curl -IL https://techtudo.com.br/tudo-sobre/instagram/plantao/23.html
+ 1446  curl -IL https://techtudo.com.br/tudo-sobre/instagram/pagina-3/plantao.html
+ 1447  curl -IL https://techtudo.com.br/mobile/qualquer-coisa.html
+ 1448  curl -IL https://techtudo.com.br/robots.txt
+ 1449  curl -IL https://techtudo.com.br/jogos/nintendo/plantao/170.html
+ 1450  curl -IL https://www.techtudo.com.br/jogos/nintendo/plantao/170.html
+ 1451  tsuru app-list | grep -i techtudo
+ 1452  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1453  watch tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1454  tsuru app update -a techtudo-vintage-shared-router-gcp-prod --plan c0.5m0.5
+ 1455  watch tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1456  tsuru app-log -fa techtudo-vintage-shared-router-gcp-prod
+ 1457  tsuru app-log -fa techtudo-vintage-shared-router-gcp-prod | grep -i 404
+ 1458  curl -IL https://www.techtudo.com.br/kits/melhores-jogos-de-terror-para-pc.html
+ 1459  tsuru app-info -a techtudo-vintage-shared-router-gcp-prod
+ 1460  curl -IL https://www.techtudo.com.br/tudo-sobre/galaxy-s22/
+ 1461  curl -IL https://www.techtudo.com.br/amp-stories/call-of-duty-warzone-conheca-o-battle-royale/story.html
+ 1462  curl -IL https://www.techtudo.com.br/amp-stories/2022/11/29/gosta-do-canva-conheca-outras-opcoes-gratis-para-fazer-pecas-graficas.ghtml
+ 1463  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod | grep error > logs-techtudo-error.txt
+ 1464  server {
+ 1465  ￼  listen  *:8080;
+ 1466  ￼  server_name baixatudo.com.br www.baixatudo.com.br baixatudo.globo.com baixatudo.com www.baixatudo.com;
+ 1467  ￼  rewrite ^/index.html https://www.techtudo.com.br/index.html permanent;
+ 1468  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod | grep -i '"status":404' --color
+ 1469  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod | grep -i '"status":404' --color > new_file_for_404.json
+ 1470  git status
+ 1471  git add rpaas/templates/http.tftpl
+ 1472  git commit -m "remove index.html from baixatudo"
+ 1473  git push
+ 1474  curl -IL https://www.techtudo.com.br/jogos/jogos-de-esporte
+ 1475  curl -IL https://www.techtudo.com.br/jogos/jogos-de-esporte/
+ 1476  curl -IL https://www.techtudo.com.br/amp/noticias/noticia/2014/09/nintendo-2ds-ganha-versao-transparente-para-celebrar-os-novos-pokemons.html
+ 1477  git status
+ 1478  git push
+ 1479  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod | grep 504 > logs-techtudo-504.txt
+ 1480  git status
+ 1481  git add rpaas/templates/http.tftpl
+ 1482  git commit -m "add server for baixatudo"
+ 1483  git push
+ 1484  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1485  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1486  curl -IL https://www.baixatudo.com.br/
+ 1487  curl -IL http://www.baixatudo.com.br
+ 1488  cd ..
+ 1489  cd techtudo-vintage-router-gcp/
+ 1490  git status
+ 1491  git diff
+ 1492  git status
+ 1493  git add .gitlab-ci/Pipelines/Terraform.gitlab-ci.yml shared/nginx-test/variables.tf
+ 1494  git commit -m "fix variables for router"
+ 1495  git status
+ 1496  cd ..
+ 1497  cd techtudo-router-gcp/
+ 1498  git status
+ 1499  git diff
+ 1500  git status
+ 1501  git add rpaas/templates/routes-vintage.tftpl
+ 1502  git commit -m "fix route for amp-stories and videos"
+ 1503  git push
+ 1504  cd ~/dev/routes_gcp/
+ 1505  code .
+ 1506  curl -IL https://revistagloborural.globo.com/Noticias/CBN-Agro/noticia/2022/07/credito-do-plano-safra-2223-para-maquinas-deve-durar-40-dias.html
+ 1507  curl -IL https://revistagloborural.globo.com/
+ 1508  curl -IL https://revistagloborural.globo.com/Noticias/CBN-Agro/noticia/2022/07/credito-do-plano-safra-2223-para-maquinas-deve-durar-40-dias.html
+ 1509  curl -IL https://revistacasaejardim.globo.com/Casa-e-Comida
+ 1510  tsuru rpaasv2 info -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1511  tsuru app-info -a theodor
+ 1512  tsuru app-log -fa theodor
+ 1513  tsuru rpaasv2 info -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1514  tsuru rpaasv2 logs -f -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1515  tsuru rpaasv2 info -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1516  watch tsuru rpaasv2 info -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1517  tsuru rpaasv2 info -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1518  tsuru rpaasv2 logs -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1519  tsuru rpaasv2 logs -f -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1520  tsuru rpaasv2 logs -f -s rpaasv2-be -i audio-be-gcp-prod
+ 1521  tsuru rpaasv2 logs -f -s rpaasv2-be -i audio-be-gcp-prod | grep -i error
+ 1522  tsuru rpaasv2 info -s rpaasv2-be -i audio-be-gcp-prod
+ 1523  tsuru rpaasv2 logs -f -s rpaasv2-be -i audio-be-gcp-prod | grep -i error
+ 1524  tsuru rpaasv2 info -s rpaasv2-be -i audio-be-gcp-prod
+ 1525  watch tsuru rpaasv2 info -s rpaasv2-be -i audio-be-gcp-prod
+ 1526  tsuru rpaasv2 info -s rpaasv2-be -i audio-be-gcp-prod
+ 1527  tsuru rpaasv2 info -s rpaasv2-be -i audio-be-gcp-prod | more
+ 1528  watch tsuru rpaasv2 info -s rpaasv2-be -i audio-be-gcp-prod
+ 1529   tsuru rpaasv2 info -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1530  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1531  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1532  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1533  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1534  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1535  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1536  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1537  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-qa
+ 1538  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1539  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1540  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1541  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1542  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1543  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1544  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1545  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1546  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1547  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1548  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1549  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1550  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1551  git clone gitlab@gitlab.globoi.com:editora-globo/devops/epoca-oglobo-shared-router-gcp.git
+ 1552  cd epoca-oglobo-shared-router-gcp/
+ 1553  code .
+ 1554  git status
+ 1555  git add shared/templates/redirects-nginx.inc
+ 1556  git commit -m "add redirects in router for epoca and revistaepoca"
+ 1557  git push
+ 1558  git status
+ 1559  git diff
+ 1560  git status
+ 1561  cd ..
+ 1562  curl -IL http://revistaepoca.globo.com/header.html
+ 1563  curl -IL -H "host: revistaepoca.globo.com" epoca-oglobo-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo/header.html
+ 1564  curl -IL -H "host: revistaepoca.globo.com" https://epoca-oglobo-shared-router-gcp-prod.apps.tsuru.gcp.i.globo/header.html
+ 1565  curl -IL -H "host: revistaepoca.globo.com" epoca-oglobo-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo/header.html
+ 1566  cd techtudo-router-gcp/
+ 1567  git status
+ 1568  git add rpaas/templates/http.tftpl
+ 1569  git commit -m "fix server http.tftpl for techtudo"
+ 1570  git push
+ 1571  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1572  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1573  tsuru rpaasv2 shell -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1574  curl -IL techtudo-vintage-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo
+ 1575  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod | grep 404 > logs-techtudo-404.txt
+ 1576  ll
+ 1577  sudo rm -r new_file_for_404.json logs-techtudo-404.json logs-techtudo-504.json logs-techtudo-error.json logs-techtudo-router.zip
+ 1578  tsuru rpaasv2 logs -f -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod | grep -i '"status":404' > logs-techtudo.json
+ 1579  curl -IL techtudo-router-gcp-prod.rpaasv2-be.tsuru.gcp.i.globo/tudo-sobre/motorola-flipout.html
+ 1580  tsuru rpaasv2 shell -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1581  cd ..
+ 1582  cd techtudo-vintage-router-gcp/
+ 1583  sudo rm -r .git
+ 1584  git init
+ 1585  git remote add origin gitlab@gitlab.globoi.com:wpoliveira/techtudo-vintage-router-gcp.git
+ 1586  git add .
+ 1587  git commit -m "Initial commit"
+ 1588  git push -u origin master
+ 1589  git status
+ 1590  git add shared/prod/terraform.tfvars
+ 1591  git commit -m "fix domain"
+ 1592  git push
+ 1593  cd ..
+ 1594  ll
+ 1595  cd ..
+ 1596  ll
+ 1597  teste-script-rpaas/
+ 1598  cd teste-script-rpaas/
+ 1599  ll
+ 1600  cpde .
+ 1601  code .
+ 1602  curl -IL https://techtudo.com.br/downloads/baixatudo/categoria/internet/0,,doa15765-7643-bitlord+11,00.html),vai
+ 1603  curl -IL https://techtudo.com.br/downloads/baixatudo/categoria/internet/0,,doa15765-7643-bitlord+11,00.html
+ 1604  tsuru app-list | grep -i futebol
+ 1605  tsuru app-log -fa futebol-sgr-prod
+ 1606  tsuru app-log -fa futebol-sgr-gcp-prod
+ 1607  tsuru app-list | grep -i futebol
+ 1608  tsuru plan list
+ 1609  tsuru app-list | grep -i servico
+ 1610  tsuru app-list | grep -i audio-api
+ 1611  tsuru app-info -a audio-api-sgr-gcp-prod
+ 1612  tsuru app-info -a servico-api-sgr-gcp-prod
+ 1613  tsuru app-log -fa audio-api-sgr-gcp-prod
+ 1614  tsuru app-log -fa audio-api-sgr-gcp-prod | grep -i error
+ 1615  tsuru app-log -fa servico-api-sgr-gcp-prod | grep -i error
+ 1616  tsuru app-log -fa servico-api-sgr-gcp-prod
+ 1617  tsuru app-list | grep -i cbn
+ 1618  tsuru app-log -fa cbn-estaticos-gcp-prod
+ 1619  tsuru app-list | grep -i cbn
+ 1620  tsuru app-log -fa cbn-mobile-estaticos-gcp-prod
+ 1621  tsuru app-list | grep -i cbn
+ 1622  tsuru app-log -fa cbn-preview-gcp-prod
+ 1623  tsuru app-list | grep -i cbn
+ 1624  tsuru app-list | grep -i router
+ 1625  tsuru app-list | grep -i api
+ 1626  tsuru app-list | grep -i rpaas
+ 1627  tsuru service instance | grep -i rpaas
+ 1628  tsuru service instance | grep -i router
+ 1629  tsuru service list | grep -i router
+ 1630  tsuru service list | grep -i rpaas
+ 1631  tsuru rpaasv2 info -s rpaasv2-be -i audio-be-gcp-prod
+ 1632  tsuru rpaasv2 logs -s rpaasv2-be -i audio-be-gcp-prod
+ 1633  tsuru rpaasv2 logs -s rpaasv2-be -i audio-be-gcp-prod | grep -i error
+ 1634  curl -IL http://audio.globoradio.globo.com/podcast/feed/818/ponto-final-cbn
+ 1635  curl -IL https://audio.globoradio.globo.com/podcast/feed/818/ponto-final-cbn
+ 1636  curl -IL http://audio.globoradio.globo.com/podcast/feed/818/ponto-final-cbn
+ 1637  tsuru rpaasv2 logs -s rpaasv2-be -i cbn-be-gcp-prod | grep -i error
+ 1638  tsuru rpaasv2 logs -f -s rpaasv2-be -i cbn-be-gcp-prod | grep -i error
+ 1639  tsuru rpaasv2 logs -f -s rpaasv2-be -i audio-be-gcp-prod
+ 1640  tsuru rpaasv2 logs -f -s rpaasv2-be -i audio-be-gcp-prod | grep -i error
+ 1641  tsuru rpaasv2 info -s rpaasv2-be -i globorural-router-gcp-prod
+ 1642  watch tsuru rpaasv2 info -s rpaasv2-be -i globorural-router-gcp-prod
+ 1643  tsuru rpaasv2 logs -f -s rpaasv2-be -i globorural-router-gcp-prod
+ 1644  watch tsuru rpaasv2 info -s rpaasv2-be -i globorural-router-gcp-prod
+ 1645  tsuru rpaasv2 info -s rpaasv2-be -i techtudo-router-gcp-prod
+ 1646  tsuru rpaasv2 info -s rpaasv2-be -i autoesporte-router-gcp-qa
+ 1647  tsuru user 
+ 1648  tsuru user add
+ 1649  tsuru role-assign team-member carlos.mbaptista@g.globo gg_infoedg_escenic
+ 1650  tsuru user-info
+ 1651  $ tsuru role-assign team-member carlos.mbaptista@g.globo gg_infoedg_escenic
+ 1652  tsuru role-assign team-member carlos.mbaptista@g.globo gg_infoedg_apps gg_infoedg_consumidor gg_infoedg_contenthub gg_infoedg_conteudo gg_infoedg_novasplataformas gg_infoglobo_forumtechtudo gg_sgr gg_valor_desenvolvimento gg_valor_desenvolvimento valor
+ 1653  tsuru app-list | grep -i audio-api
+ 1654  tsuru app-log -fa audio-api-sgr-gcp-prod
+ 1655  tsuru app-info -a audio-api-sgr-gcp-prod
+ 1656  tsuru acl rules list acl-globoradio --show-sync
+ 1657  tsuru acl rules list acl-globoradio --show-sync | more
+ 1658  cd ~/dev/routes_gcp/
+ 1659  code .
+ 1660  mysql -u root -p
+ 1661  tsuru service instance list | grep -i techtudo
+ 1662  tsuru service list | grep -i techtudo
+ 1663  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1664  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1665  watch tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1666  tsuru rpaasv2 info -s rpaasv2-be -i rpaas-techtudo-router-gcp-prod
+ 1667  cd ~/dev/s3-content/
+ 1668  code .
+ 1669  cd upload_vignette_files/
+ 1670  ll
+ 1671  ./upload_static_files.sh 
+ 1672  ./upload_static_files.sh ./teste.txt 
+ 1673  ./upload_static_files.sh 
+ 1674  ./upload_static_files.sh ./teste.txt 
+ 1675  a='sss'
+ 1676  a
+ 1677  echo a
+ 1678  echo $a
+ 1679  ./upload_static_files.sh ./teste.txt 
+ 1680  echo $USER_NAME
+ 1681  ./upload_static_files.sh ./teste.txt 
+ 1682  ./upload_static_files.sh teste.txt 
+ 1683  export bla="asdasd"
+ 1684  bla
+ 1685  ./upload_static_files.sh teste.txt 
+ 1686  a="bbbb"
+ 1687  $a
+ 1688  a="cccc"
+ 1689  $a
+ 1690  ./upload_static_files.sh teste.txt 
+ 1691  ll
+ 1692  ./upload_static_files_revistas.sh.sh all_revistas.txt 
+ 1693  ./upload_static_files_revistas.sh all_revistas.txt 
+ 1694  ll
+ 1695  ./upload_static_files_revistas.sh teste_revistas.txt
+ 1696  ./upload_static_files_revistas.sh teste_revistas.txt && ./upload_static_files_epoca.sh teste_epoca.txt
+ 1697  grep --version
+ 1698  grep --help
+ 1699  grep --version
+ 1700  tsuru app-list | epoca
+ 1701  tsuru service list | epoca
+ 1702  tsuru service list | grep -i epoca
+ 1703  tsuru rpaasv2 info -s rpaasv2-fe -i epoca-oglobo-router-gcp-prod
+ 1704  tsuru app-list | grep -i epoca
+ 1705  tsuru app-info -a epoca-oglobo-shared-router-gcp-prod
+ 1706  dig revistaepoca.globo.com
+ 1707  watch dig revistaepoca.globo.com
+ 1708  curl -IL http://revistaepoca.globo.com/Epoca/0,,EPT1000439-3772-2,00.html
+ 1709  cd ~/dev/s3-content/
+ 1710  code .
+ 1711  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -i error
+ 1712  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -i 404
+ 1713  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -v "\"status\:\" \"404\""
+ 1714  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -v "\"status:\" \"404\""
+ 1715  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -v "\"status\":\"404\""
+ 1716  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -v "\"status\"\:\"404\""
+ 1717  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -v "\"404\""
+ 1718  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -v "404"
+ 1719  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -v 404
+ 1720  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -iv 404
+ 1721  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod | grep -i 404
+ 1722  vim +'redir >/dev/null' +'hi' +'redir END' +'q'
+ 1723  ll
+ 1724  cd ..
+ 1725  ll
+ 1726  cd teste-script-rpaas/
+ 1727  ll
+ 1728  cd redirects_fix/
+ 1729  ll
+ 1730  sudo rm -r venv
+ 1731  sudo virtualenv venv -p python3
+ 1732  source venv/bin/activate
+ 1733  python fix_urls_for_rewrite.py new_redirects.inc
+ 1734  python fix_urls_for_rewrite.py -p new_redirects.inc
+ 1735  tsuru app-list | grep -i epoca
+ 1736  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod
+ 1737  tsuru service list | grep -i epoca
+ 1738  curl -IL https://epoca.oglobo.globo.com/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1739  curl -IL http://epoca.oglobo.globo.com/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1740  cat /etc/hosts
+ 1741  curl -IL https://epoca.oglobo.globo.com/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1742  curl -IL http://epoca.oglobo.globo.com/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1743  curl -IL http://epoca.globo.com/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1744  curl -IL http://epoca-oglobo-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1745  curl -IL https://epoca-oglobo-shared-router-gcp-prod.apps.tsuru.gcp.i.globo/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1746  curl -IL http://epoca-oglobo-shared-router-gcp-prod.http-apps.tsuru.gcp.i.globo/Informacao/Dilemas/noticia/2015/05/crise-afeta-usp-e-curso-precisa-de-docente-emprestado.html
+ 1747  curl -IL http://revistaepoca.globo.com/Revista/Epoca/0,,EMI115749-15228,00-A+CIVILIZACAO+PERDIDA+DA+AMAZONIA.html
+ 1748  curl -IL -H "host: revistacrescer.globo.com" 172.20.148.88:8000/Revista/Crescer/0,,EMI96057-17650,00-GRAVIDEZ+DA+CONCEPCAO+AO+NASCIMENTO+DO+BEBE.html
+ 1749  cat /etc/hosts
+ 1750  sudo nano /etc/hosts
+ 1751  curl -IL -H "host: revistacrescer.globo.com" 172.20.148.88:8000/Revista/Crescer/0,,EMI96057-17650,00-GRAVIDEZ+DA+CONCEPCAO+AO+NASCIMENTO+DO+BEBE.html
+ 1752  tsuru app log -fa kogut-shared-router-gcp-prod | grep -i 404
+ 1753  cd kogut-router-gcp/
+ 1754  git status
+ 1755  git add shared/templates/routes.tftpl
+ 1756  git status
+ 1757  git stash
+ 1758  git stash clear
+ 1759  git pull
+ 1760  cd .
+ 1761  cd ..
+ 1762  cd autoesporte-router-gcp/
+ 1763  git status
+ 1764  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1765  git commit -m "update variable for show generic mapper"
+ 1766  git push
+ 1767  cd ..
+ 1768  cd blogs-router-gcp/
+ 1769  git status
+ 1770  git add shared/prod/terraform.tfvars shared/templates/routes.tftpl
+ 1771  git commit -m "update variable for show generic mapper"
+ 1772  git push
+ 1773  cd ..
+ 1774  cd autoesporte-router-gcp/
+ 1775  git status
+ 1776  git remote origin url
+ 1777  git remote origin get-url
+ 1778  git remote get-url
+ 1779  git remote get-url origin
+ 1780  cd ..
+ 1781  cd blogs-router-gcp/
+ 1782  git status
+ 1783  git remote rename origin old-origin
+ 1784  git remote add origin gitlab@gitlab.globoi.com:editora-globo/devops/blogs-router-gcp.git
+ 1785  git push -u origin master
+ 1786  cd ..
+ 1787  cd autoesporte-router-gcp/
+ 1788  git status
+ 1789  git diff
+ 1790  git status
+ 1791  git add rpaas/templates/routes.tftpl
+ 1792  git commit -m "update variable for show generic mapper"
+ 1793  git push
+ 1794  cd ..
+ 1795  cd blogs-router-gcp/
+ 1796  git status
+ 1797  git diff
+ 1798  git status
+ 1799  git add shared/templates/routes.tftpl
+ 1800  git commit -m "update variable for show generic mapper"
+ 1801  git push
+ 1802  cd ..
+ 1803  cd casaejardim-router-gcp/
+ 1804  git status
+ 1805  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1806  git commit -m "update variable for show generic mapper"
+ 1807  git push
+ 1808  cd ..
+ 1809  cd casavogue-router-gcp/
+ 1810  git status
+ 1811  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1812  git commit -m "update variable for show generic mapper"
+ 1813  git push
+ 1814  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/casavogue-router-gcp.git
+ 1815  cd ..
+ 1816  cd crescer-router-gcp/
+ 1817  git status
+ 1818  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1819  git commit -m "update variable for show generic mapper"
+ 1820  git push
+ 1821  cd ..
+ 1822  cd epoca-oglobo-shared-router-gcp/
+ 1823  git status
+ 1824  git stash
+ 1825  git stash clear
+ 1826  git pull
+ 1827  cd ..
+ 1828  cd ~/dev/routes_gcp/epocanegocios-router-gcp/
+ 1829  git status
+ 1830  git diff
+ 1831  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1832  git commit -m "update variable for show generic mapper"
+ 1833  git push
+ 1834  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/epocanegocios-router-gcp.git
+ 1835  cd ..
+ 1836  cd galileu-router-gcp/
+ 1837  git status
+ 1838  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1839  git commit -m "update variable for show generic mapper"
+ 1840  git push
+ 1841  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/galileu-router-gcp.git
+ 1842  cd ..
+ 1843  cd glamour-router-gcp/
+ 1844  git status
+ 1845  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1846  git commit -m "update variable for show generic mapper"
+ 1847  git push
+ 1848  cd ..
+ 1849  cd globorural-router-gcp/
+ 1850  git status
+ 1851  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1852  git commit -m "update variable for show generic mapper"
+ 1853  git push
+ 1854  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/globorural-router-gcp.git
+ 1855  cd ..
+ 1856  cd gq-router-gcp/
+ 1857  git status
+ 1858  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1859  git commit -m "update variable for show generic mapper"
+ 1860  git push
+ 1861  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/gq-router-gcp.git
+ 1862  cd ..
+ 1863  cd kogut-router-gcp/
+ 1864  git status
+ 1865  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1866  git commit -m "update variable for show generic mapper"
+ 1867  git add shared/prod/terraform.tfvars shared/templates/routes.tftpl
+ 1868  git commit -m "update variable for show generic mapper"
+ 1869  git push
+ 1870  cd ..
+ 1871  cd marieclaire-router-gcp/
+ 1872  git status
+ 1873  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1874  git commit -m "update variable for show generic mapper"
+ 1875  git push
+ 1876  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/marieclaire-router-gcp.git
+ 1877  cd ..
+ 1878  cd monet-router-gcp/
+ 1879  git status
+ 1880  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1881  git commit -m "update variable for show generic mapper"
+ 1882  git push
+ 1883  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/monet-router-gcp.git
+ 1884  cd ..
+ 1885  cd pegn-router-gcp/
+ 1886  git status
+ 1887  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1888  git commit -m "update variable for show generic mapper"
+ 1889  git push
+ 1890  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/pegn-router-gcp.git
+ 1891  cd ..
+ 1892  cd quem-router-gcp/
+ 1893  git status
+ 1894  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1895  git commit -m "update variable for show generic mapper"
+ 1896  git push
+ 1897  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/quem-router-gcp.git
+ 1898  cd ..
+ 1899  cd techtudo-
+ 1900  cd techtudo-router-gcp/
+ 1901  git status
+ 1902  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1903  git commit -m "update variable for show generic mapper"
+ 1904  git push
+ 1905  cd ..
+ 1906  cd techtudo-vintage-router-gcp/
+ 1907  git status
+ 1908  git add shared/prod/terraform.tfvars
+ 1909  git commit -m "update variable for show generic mapper"
+ 1910  git push
+ 1911  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/techtudo-vintage-router-gcp.git
+ 1912  cd ..
+ 1913  cd vidadebicho-router-gcp/
+ 1914  git status
+ 1915  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1916  git commit -m "update variable for show generic mapper"
+ 1917  git push
+ 1918  cd ..
+ 1919  cd vogue-router-gcp/
+ 1920  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1921  git commit -m "update variable for show generic mapper"
+ 1922  git push
+ 1923  git remote set-url origin gitlab@gitlab.globoi.com:editora-globo/devops/vogue-router-gcp.git
+ 1924  cd ..
+ 1925  git clone gitlab@gitlab.globoi.com:editora-globo/valor-router-gcp.git
+ 1926  git clone gitlab@gitlab.globoi.com:editora-globo/extra-router-gcp.git
+ 1927  cd extra-router-gcp/
+ 1928  cd ..
+ 1929  cd valor-router-gcp/
+ 1930  git status 
+ 1931  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1932  git commit -m "update variable for show generic mapper"
+ 1933  git push
+ 1934  cd ..
+ 1935  git clone gitlab@gitlab.globoi.com:editora-globo/oglobo-router-gcp.git
+ 1936  cd oglobo-router-gcp/
+ 1937  git status
+ 1938  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1939  git commit -m "update variable for show generic mapper"
+ 1940  git push
+ 1941  cd ..
+ 1942  git clone gitlab@gitlab.globoi.com:editora-globo/extra-router-gcp.git
+ 1943  cd extra-router-gcp/
+ 1944  git status
+ 1945  git add rpaas/prod/terraform.tfvars rpaas/templates/routes.tftpl
+ 1946  git commit -m "update variable for show generic mapper"
+ 1947  git push
+ 1948  cd ..
+ 1949  git clone gitlab@gitlab.globoi.com:gg_sgr/bhfm-shared-router-gcp.git
+ 1950  cd bhfm-shared-router-gcp/
+ 1951  git status
+ 1952  git add prod/terraform.tfvars
+ 1953  git commit -m "update variable for show generic mapper"
+ 1954  git push
+ 1955  cd ..
+ 1956  git clone gitlab@gitlab.globoi.com:gg_sgr/globoradio-shared-router-gcp.git
+ 1957  cd globoradio-shared-router-gcp/
+ 1958  git add prod/terraform.tfvars
+ 1959  git commit -m "update variable for show generic mapper"
+ 1960  git push
+ 1961  cd ..
+ 1962  git clone gitlab@gitlab.globoi.com:gg_sgr/audioglobo-shared-router-gcp.git
+ 1963  cd audioglobo-shared-router-gcp/
+ 1964  git status
+ 1965  git diff
+ 1966  git status
+ 1967  git add deploy/upstreams.conf prod/terraform.tfvars
+ 1968  git commit -m "update variable for show generic mapper"
+ 1969  git push
+ 1970  cd ..
+ 1971  git clone gitlab@gitlab.globoi.com:gg_sgr/futebolglobocbn-shared-router-gcp.git
+ 1972  cd futebolglobocbn-shared-router-gcp/
+ 1973  git status
+ 1974  git add deploy/upstreams.conf prod/terraform.tfvars
+ 1975  git commit -m "update variable for show generic mapper"
+ 1976  git push
+ 1977  tsuru rpaasv2 info -s rpaasv2-be -i epocanegocios-router-gcp-prod
+ 1978  tsuru rpaasv2 logs -f -s rpaasv2-be -i epocanegocios-router-gcp-prod
+ 1979  tsuru app-list | grep -i epoca
+ 1980  tsuru app-log -fa epoca-oglobo-shared-router-gcp-prod
+ 1981  curl -IL https://kogut.oglobo.globo.com/noticias-da-tv/fotos/2014/03/grazi-lista-cinco-apresentadores-que-admira.html
+ 1982  curl http://revistaepoca.globo.com/Esportes/Noticias/Futebol/Brasileirao/Serie_A/0,,MUL700895-9827,00-MARATONISTA+FLAMENGO+MINIMIZA+PERDA+DA+LIDERANCA+DO+CAMPEONATO+BRASILEIRO.html
+ 1983  cd ..
+ 1984  mkdir playground
+ 1985  cd playground/
+ 1986  mkdir stable-diffusion
+ 1987  cd stable-diffusion/
+ 1988  virtualenv venv -p python3
+ 1989  source venv/bin/activate
+ 1990  python --version
+ 1991  wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh
+ 1992  bash Miniconda3-py38_4.12.0-Linux-x86_64.sh
+ 1993  git clone https://github.com/CompVis/stable-diffusion.git && cd stable-diffusion
+ 1994  conda env create -f environment.yaml && conda activate ldm
+ 1995  conda
+ 1996  miniconda
+ 1997  conda --version
+ 1998  wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh && bash Miniconda3-py38_4.12.0-Linux-x86_64.sh
+ 1999  ll
+ 2000  sudo rm -r stable-diffusion
+ 2001  ll
+ 2002  conda
+ 2003  virtualenv venv -p python3.9
+ 2004  virtualenv venv -p python4
+ 2005  virtualenv venv -p python3
+ 2006  source venv/bin/activate
+ 2007  conda env create -f environment.yaml
+ 2008  git clone git@github.com:CompVis/stable-diffusion.git
+ 2009  cd stable-diffusion/
+ 2010  code .
+ 2011  git clone git@github.com:openai/guided-diffusion.git
+ 2012  ll
+ 2013  python --version
+ 2014  python main.py 
+ 2015  python setup.py 
+ 2016  python setup.py install
+ 2017  sudo apt install python3.9
+ 2018  deactivate 
+ 2019  cd ..
+ 2020  sudo rm -r venv
+ 2021  sudo apt install python3.9 && sudo apt-get install python3.9-dev python3.9-venv && python3.9 -m venv sandbox && source sandbox/bin/activate
+ 2022  sudo apt update
+ 2023  sudo apt install python3.9 && sudo apt-get install python3.9-dev python3.9-venv && python3.9 -m venv sandbox && source sandbox/bin/activate
+ 2024  sudo apt update -f
+ 2025  sudo apt update --help
+ 2026  sudo apt full-upgrade
+ 2027  tsuru rpaasv2 logs -f -s rpaasv2-be -i epocanegocios-router-gcp-prod
+ 2028  sudo apt update
+ 2029  sudo apt install python3.9 && sudo apt-get install python3.9-dev python3.9-venv && python3.9 -m venv sandbox && source sandbox/bin/activate
+ 2030  ll
+ 2031  sudo add-apt-repository ppa:deadsnakes/ppa 
+ 2032  sudo apt install python3.9 
+ 2033  python --version
+ 2034  python3.9 --version
+ 2035  sudo apt-get install python3.9-dev python3.9-venv
+ 2036  python3.9 -m venv venv3-9
+ 2037  source venv3-9/bin/activate
+ 2038  python --version
+ 2039  ll
+ 2040  cd stable-diffusion/
+ 2041  conda env create -f environment.yaml && conda activate ldm && conda install pytorch torchvision -c pytorch && pip install transformers==4.19.2 diffusers invisible-watermark && pip install -e .
+ 2042  conda activate ldm && conda install pytorch torchvision -c pytorch && pip install transformers==4.19.2 diffusers invisible-watermark && pip install -e .
+ 2043  ll
+ 2044  mkdir -p models/ldm/stable-diffusion-v1/
+ 2045  ll
+ 2046  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms 
+ 2047  python
+ 2048  conda env create -f environment.yaml
+ 2049  python3.9 scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms 
+ 2050  python3.9 scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2051  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2052  python --version
+ 2053  deactivate 
+ 2054  python3.9 -m venv venv3-9 && source venv3-9/bin/activate
+ 2055  python --version
+ 2056  pip install transformers==4.19.2 diffusers invisible-watermark && pip install -e .
+ 2057  python --version
+ 2058  conda install pytorch torchvision -c pytorch
+ 2059  conda update -n base -c defaults conda
+ 2060  python --version
+ 2061  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2062  python --version
+ 2063  pip3 install opencv-python
+ 2064  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2065  ll
+ 2066  python3.9 setup.py
+ 2067  python3.9 setup.py install
+ 2068  python3.9 setup.py build
+ 2069  python3.9 main.py
+ 2070  python --version
+ 2071  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2072  pip version
+ 2073  pip --version
+ 2074  pip install pytorch==1.11.0
+ 2075  pip install torchvision==0.12.0
+ 2076  pip install pytorch=1.11.0
+ 2077  pip install pytorch==1.11.0
+ 2078  pip --version
+ 2079  pip install pytorch==1.11
+ 2080  pip3 --version
+ 2081  pip3 install pytorch=1.11.0
+ 2082  pip3 install pytorch==1.11.0
+ 2083  pip install torch===1.11.0 torchvision===0.5.0 -f https://download.pytorch.org/whl/torch_stable.html
+ 2084  pip install torch===1.11.0 torchvision -f https://download.pytorch.org/whl/torch_stable.html
+ 2085  pip install pytorch==1.11.0
+ 2086  conda install pytorch==1.11.0
+ 2087  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2088  pip install omegaconf
+ 2089  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2090  pip install imWatermark
+ 2091  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2092  pip install opencv-python
+ 2093  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2094  pip install imwatermark
+ 2095  conda install -c conda-forge watermark
+ 2096  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2097  python -m scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2098  python -m scripts/txt2img --prompt "a photograph of an astronaut riding a horse" --plms
+ 2099  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2100  conda env remove -n ldm
+ 2101  deactivate
+ 2102  source venv3-9/bin/activate
+ 2103  deactivate 
+ 2104  source venv3-9/bin/activate
+ 2105  conda env remove -n ldm
+ 2106  sudo conda env remove -n ldm
+ 2107  conda deactivate && conda env remove -n ldm
+ 2108  conda env create -f enviroment.yaml
+ 2109  ll
+ 2110  conda env create -f environment.yaml
+ 2111  conda activate ldm
+ 2112  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2113  mkdir -p models/ldm/stable-diffusion-v1/
+ 2114  git clone git@github.com:ShieldMnt/invisible-watermark.git
+ 2115  pip install invisible-watermark
+ 2116  ln -s <path/to/model.ckpt> models/ldm/stable-diffusion-v1/model.ckpt
+ 2117  ll
+ 2118  ln -s full_model/sd-v1-4-full-ema.ckpt models/ldm/stable-diffusion-v1/model.ckpt 
+ 2119  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2120  ln -s full_model/sd-v1-4-full-ema models/ldm/stable-diffusion-v1/model.ckpt 
+ 2121  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2122  ln -s full_model/sd-v1-4 models/ldm/stable-diffusion-v1/model.ckpt
+ 2123  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2124  ln -s full_model/sd-v1-4.ckpt models/ldm/stable-diffusion-v1/model.ckpt
+ 2125  python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+ 2126  pip install --upgrade diffusers transformers scipy
+ 2127  huggingface-cli login
+ 2128  ll
+ 2129  python --version
+ 2130  python my-scripts/txt2img.py
+ 2131  history > historico.txt

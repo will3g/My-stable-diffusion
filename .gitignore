@@ -1,0 +1,6 @@
+venv
+venv3-9
+dist
+egg-info
+full_model
+models/ldm/stable-diffusion-v1
